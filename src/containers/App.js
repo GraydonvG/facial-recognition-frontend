@@ -25,15 +25,18 @@ class App extends Component {
     this.setState({ input: event.target.value });
   };
 
-  onButtonSubmit = () => {
-    this.setState({ imageUrl: this.state.input });
+  onButtonSubmit = (event) => {
+    console.log(event.target.value);
+    const { input } = this.state;
+    this.setState({ imageUrl: input });
     app.models
-      .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-      .then((response) => console.log(response))
+      .predict(Clarifai.FACE_DETECT_MODEL, input)
+      .then((response) => console.log(response.outputs[0].data.regions[0].region_info.bounding_box))
       .catch((err) => console.log(err));
   };
 
   render() {
+    const { imageUrl } = this.state;
     return (
       <div className="App">
         <Navigation />
@@ -44,7 +47,7 @@ class App extends Component {
           onButtonSubmit={this.onButtonSubmit}
         />
         <Particles className="particles" />
-        <FaceRecognition image={this.state.input} />
+        <FaceRecognition imageUrl={imageUrl} />
       </div>
     );
   }
