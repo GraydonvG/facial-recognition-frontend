@@ -6,7 +6,13 @@ import './Logo.css';
 const Logo = () => {
   return (
     <div className="center ma0 mt0 ml3">
-      <Tilt className="Tilt br2 shadow-2">
+      <Tilt
+        tiltReverse={true}
+        className="Tilt br2 shadow-2"
+        tiltMaxAngleX={30}
+        tiltMaxAngleY={30}
+        transitionSpeed={1500}
+        scale={1.2}>
         <div className="pa3">
           <img
             className="grow-large pointer"
