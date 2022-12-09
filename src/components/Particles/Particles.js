@@ -34,17 +34,23 @@ const ParticlesComponent = () => {
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: 'bubble',
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 1,
+              quantity: 4,
             },
-            repulse: {
-              distance: 100,
-              duration: 0.4,
+            bubble: {
+              distance: 200,
+              duration: 2,
+              mix: false,
+              opacity: 10,
+              size: 10,
+              color: {
+                value: '#ffffff',
+              },
             },
           },
         },
@@ -53,6 +59,7 @@ const ParticlesComponent = () => {
             value: '#ffffff',
           },
           links: {
+            blink: true,
             color: '#ffffff',
             distance: 150,
             enable: true,
