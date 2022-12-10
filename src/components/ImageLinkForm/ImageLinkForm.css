@@ -1,3 +1,23 @@
 .form {
-  width: 700px;
+  width: fit-content;
+}
+
+@media screen and (max-width: 400px) {
+  .small-window {
+    padding: 1rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem;
+  }
+  .form > .small-input {
+    width: max-content;
+  }
+  .form > .small-btn {
+    width: fit-content;
+  }
 }
