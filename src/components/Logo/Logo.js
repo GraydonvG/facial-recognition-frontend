@@ -16,6 +16,7 @@ const Logo = () => {
         <div className="pa3 inner-element">
           <img
             className="pointer"
+            draggable="false"
             src={logo}
             alt={'brain'}></img>
         </div>

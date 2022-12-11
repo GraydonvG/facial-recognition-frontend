@@ -12,7 +12,3 @@
 .inner-element {
   transform: translateZ(40px);
 }
-
-img {
-  -webkit-user-drag: none;
-}
