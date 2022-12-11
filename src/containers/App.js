@@ -66,13 +66,13 @@ class App extends Component {
     return (
       <div className="App">
         <Particles className="particles" />
-        <Navigation onRouteChange={this.onRouteChange} />
         {route === 'signin' ? (
           <Signin onRouteChange={this.onRouteChange} />
         ) : route === 'register' ? (
           <Register onRouteChange={this.onRouteChange} />
         ) : (
           <>
+            <Navigation onRouteChange={this.onRouteChange} />
             <Logo />
             <Rank />
             <ImageLinkForm

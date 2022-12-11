@@ -8,7 +8,7 @@ const Logo = () => {
     <div className="center ma0 mt0 ml3">
       <Tilt
         tiltReverse={true}
-        className="Tilt br2 shadow-2"
+        className="Tilt br3 shadow-2"
         tiltMaxAngleX={30}
         tiltMaxAngleY={30}
         transitionSpeed={1500}
