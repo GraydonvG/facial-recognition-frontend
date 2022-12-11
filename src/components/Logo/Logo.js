@@ -7,15 +7,15 @@ const Logo = () => {
   return (
     <div className="center ma0 mt0 ml3">
       <Tilt
+        className="Tilt br3 shadow-2 parallax-effect-img"
+        perspective={1000}
         tiltReverse={true}
-        className="Tilt br3 shadow-2"
         tiltMaxAngleX={30}
         tiltMaxAngleY={30}
-        transitionSpeed={1500}
-        scale={1.2}>
-        <div className="pa3">
+        transitionSpeed={1500}>
+        <div className="pa3 inner-element">
           <img
-            className="grow-large pointer"
+            className="pointer"
             src={logo}
             alt={'brain'}></img>
         </div>
