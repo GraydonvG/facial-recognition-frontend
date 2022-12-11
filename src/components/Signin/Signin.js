@@ -19,7 +19,7 @@ const Signin = ({ onRouteChange }) => {
               </label>
               <input
                 style={{ width: '18rem', border: 'solid black 0.1rem' }}
-                className="grow b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                className="b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
                 type="email"
                 name="email-address"
                 id="email-address"
@@ -33,7 +33,7 @@ const Signin = ({ onRouteChange }) => {
               </label>
               <input
                 style={{ width: '18rem', border: 'solid black 0.1rem' }}
-                className="grow br3 b pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                className="br3 b pa2 input-reset ba bg-transparent hover-bg-black hover-white"
                 type="password"
                 name="password"
                 id="password"
@@ -43,7 +43,7 @@ const Signin = ({ onRouteChange }) => {
           <div className="">
             <input
               style={{ border: 'solid black 0.1rem' }}
-              className="b br3 ph3 pv2 input-reset ba b--black bg-transparent grow pointer f4 dib"
+              className="b br3 ph3 pv2 input-reset ba b--black bg-transparent pointer f4 dib hover-bg-black hover-white"
               type="submit"
               value="Sign in"
               onClick={() => onRouteChange('home')}
@@ -60,7 +60,7 @@ const Signin = ({ onRouteChange }) => {
           <div className="">
             <input
               style={{ border: 'solid black 0.1rem' }}
-              className="b br3 ph3 pv2 input-reset ba b--black bg-transparent grow pointer f4 dib"
+              className="b br3 ph3 pv2 input-reset ba b--black bg-transparent pointer f4 dib hover-bg-black hover-white"
               type="submit"
               value="Register"
               onClick={() => onRouteChange('register')}

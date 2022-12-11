@@ -20,7 +20,7 @@ const Register = ({ onRouteChange }) => {
                 </label>
                 <input
                   style={{ width: '18rem', border: 'solid black 0.1rem' }}
-                  className="b grow br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                  className="b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
                   type="text"
                   name="name"
                   id="name"
@@ -33,7 +33,7 @@ const Register = ({ onRouteChange }) => {
               </label>
               <input
                 style={{ width: '18rem', border: 'solid black 0.1rem' }}
-                className="b grow br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                className="b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
                 type="email"
                 name="email-address"
                 id="email-address"
@@ -47,7 +47,7 @@ const Register = ({ onRouteChange }) => {
               </label>
               <input
                 style={{ width: '18rem', border: 'solid black 0.1rem' }}
-                className="b grow br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                className="b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
                 type="password"
                 name="password"
                 id="password"
@@ -57,7 +57,7 @@ const Register = ({ onRouteChange }) => {
           <div className="">
             <input
               style={{ border: 'solid black 0.1rem' }}
-              className="b br3 ph3 pv2 input-reset ba bg-transparent grow pointer f4 dib"
+              className="b br3 ph3 pv2 input-reset ba bg-transparent pointer f4 dib hover-bg-black hover-white"
               type="submit"
               value="Register"
               onClick={() => onRouteChange('home')}
@@ -73,7 +73,7 @@ const Register = ({ onRouteChange }) => {
           </div>
           <input
             style={{ border: 'solid black 0.1rem' }}
-            className="b br3 ph3 pv2 input-reset ba bg-transparent grow pointer f4 dib"
+            className="b br3 ph3 pv2 input-reset ba bg-transparent pointer f4 dib hover-bg-black hover-white"
             type="submit"
             value="Sign In"
             onClick={() => onRouteChange('signin')}
