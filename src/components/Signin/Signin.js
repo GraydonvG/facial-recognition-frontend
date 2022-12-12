@@ -54,7 +54,7 @@ const Signin = ({ onRouteChange }) => {
               href="#0"
               className="f4 black db b"
               onClick={() => onRouteChange('register')}>
-              <span className="db mb1">or,</span> if you don't have an account
+              Don't have an account?
             </p>
           </div>
           <div className="">

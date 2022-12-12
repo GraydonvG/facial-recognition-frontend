@@ -68,7 +68,7 @@ const Register = ({ onRouteChange }) => {
               href="#0"
               className="f4 black db b"
               onClick={() => onRouteChange('register')}>
-              <span className="bd mb1">or,</span> if you have an account
+              Have an account?
             </p>
           </div>
           <input
