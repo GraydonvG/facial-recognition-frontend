@@ -12,7 +12,8 @@ const Logo = () => {
         tiltReverse={true}
         tiltMaxAngleX={30}
         tiltMaxAngleY={30}
-        transitionSpeed={1500}>
+        transitionSpeed={1500}
+        trackOnWindow={true}>
         <div className="pa3 inner-element">
           <img
             className="pointer"
