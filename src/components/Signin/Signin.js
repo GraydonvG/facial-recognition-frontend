@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class Signin extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       signInEmail: '',
       signInPassword: '',
@@ -27,8 +27,9 @@ class Signin extends Component {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data === 'success') {
+      .then((user) => {
+        if (user.id) {
+          this.props.loadUser(user);
           this.props.onRouteChange('home');
         }
       });
@@ -87,12 +88,7 @@ class Signin extends Component {
               />
             </div>
             <div className="mt4">
-              <p
-                href="#0"
-                className="f4 black db b"
-                onClick={() => onRouteChange('register')}>
-                Don't have an account?
-              </p>
+              <p className="f4 black db b">Don't have an account?</p>
             </div>
             <div className="">
               <input
