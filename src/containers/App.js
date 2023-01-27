@@ -63,16 +63,19 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
+
     const {
       input,
       user,
       user: { id },
     } = this.state;
-    const YOUR_PERSONAL_TOKEN = 'd3415eb475f743e38380ccbb6b794283';
+
+    const YOUR_PERSONAL_TOKEN = '';
+
     const raw = JSON.stringify({
       user_app_id: {
-        user_id: 'cm0a9xutvy43',
-        app_id: 'my-first-application',
+        user_id: '',
+        app_id: '',
       },
       inputs: [
         {

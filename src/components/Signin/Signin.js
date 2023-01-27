@@ -78,7 +78,7 @@ class Signin extends Component {
                 />
               </div>
             </fieldset>
-            <div className="">
+            <div>
               <input
                 style={{ border: 'solid black 0.1rem' }}
                 className="b br3 ph3 pv2 input-reset ba b--black bg-transparent pointer f4 dib hover-bg-black hover-white"
