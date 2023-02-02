@@ -17,21 +17,6 @@ const initialState = {
   isSignedIn: false,
   user: {
     id: '',
-    name: null,
-    email: null,
-    entries: 0,
-    joined: '',
-  },
-};
-
-const initialState = {
-  input: '',
-  imageUrl: '',
-  box: {},
-  route: 'signin',
-  isSignedIn: false,
-  user: {
-    id: '',
     name: '',
     email: '',
     entries: 0,
