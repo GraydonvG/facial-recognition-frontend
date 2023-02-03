@@ -3,12 +3,12 @@ import {
   Label,
   InputField,
   Button,
-  Paragraph,
+  FormText,
   FormFieldset,
   FormLegend,
   FormContainer,
   FormCard,
-} from '../FormComponents';
+} from '../FormComponents/FormComponents';
 
 class Register extends Component {
   constructor(props) {
@@ -104,7 +104,7 @@ class Register extends Component {
             buttonValue={'Register'}
             onButtonPress={this.onSubmitRegister}
           />
-          <Paragraph paragraphText={'Already have an account?'} />
+          <FormText text={'Already have an account?'} />
           <Button
             buttonType={'submit'}
             buttonValue={'Sign In'}

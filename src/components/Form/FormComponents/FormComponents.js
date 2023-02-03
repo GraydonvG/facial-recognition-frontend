@@ -68,6 +68,6 @@ export const Button = ({ onButtonPress, buttonType, buttonValue }) => {
   );
 };
 
-export const Paragraph = ({ paragraphText }) => {
-  return <p className="f4 black db b mt4">{paragraphText}</p>;
+export const FormText = ({ text }) => {
+  return <p className="f4 black db b mt4">{text}</p>;
 };

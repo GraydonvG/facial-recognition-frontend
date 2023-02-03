@@ -3,12 +3,12 @@ import {
   Label,
   InputField,
   Button,
-  Paragraph,
+  FormText,
   FormFieldset,
   FormLegend,
   FormContainer,
   FormCard,
-} from '../FormComponents';
+} from '../FormComponents/FormComponents';
 
 class Signin extends Component {
   constructor(props) {
@@ -87,7 +87,7 @@ class Signin extends Component {
             buttonValue={'Sign in'}
             onButtonPress={this.onSubmitSignIn}
           />
-          <Paragraph paragraphText={"Don't have an account?"} />
+          <FormText text={"Don't have an account?"} />
           <Button
             buttonType={'submit'}
             buttonValue={'Register'}
