@@ -73,37 +73,13 @@ class App extends Component {
       user: { id },
     } = this.state;
 
-    const YOUR_PERSONAL_TOKEN = '';
-
-    const raw = JSON.stringify({
-      user_app_id: {
-        user_id: '',
-        app_id: '',
-      },
-      inputs: [
-        {
-          data: {
-            image: {
-              url: input,
-            },
-          },
-        },
-      ],
-    });
-
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        Authorization: `Key ${YOUR_PERSONAL_TOKEN}`,
-      },
-      body: raw,
-    };
-
-    fetch(
-      `https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`,
-      requestOptions
-    )
+    fetch('http://localhost:3000/imageurl', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        input: input,
+      }),
+    })
       .then((response) => response.json())
       .then((response) => {
         if (response) {
@@ -118,7 +94,7 @@ class App extends Component {
             .then((count) => {
               this.setState(Object.assign(user, { entries: count }));
             })
-            .catch(console.log);
+            .catch((error) => console.log('error', error));
         }
         this.displayFaceBox(this.calculateFaceLocation(response));
       })
