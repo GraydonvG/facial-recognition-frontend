@@ -15,10 +15,9 @@ export const FormContainer = ({ children }) => {
   );
 };
 
-export const FormCard = ({ children, submitOnEnterPress }) => {
+export const FormCard = ({ children }) => {
   return (
     <div
-      onKeyDown={submitOnEnterPress}
       className="shadow-3 br3 pa3 pa4-ns mv3 tc black-80 measure"
       style={{ width: 'fit-content', height: 'fit-content' }}>
       {children}
@@ -44,7 +43,7 @@ export const Label = ({ labelName, forLabel }) => {
   );
 };
 
-export const InputField = ({ onFieldChange, inputFieldType, inputFieldName }) => {
+export const InputField = ({ onFieldChange, inputFieldType, inputFieldName, submitOnEnterPress }) => {
   return (
     <input
       style={{ width: '18rem', border: 'solid black 0.1rem' }}
@@ -52,6 +51,7 @@ export const InputField = ({ onFieldChange, inputFieldType, inputFieldName }) =>
       type={inputFieldType}
       name={inputFieldName}
       onChange={onFieldChange}
+      onKeyDown={submitOnEnterPress}
     />
   );
 };

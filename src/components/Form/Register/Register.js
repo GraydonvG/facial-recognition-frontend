@@ -74,6 +74,7 @@ class Register extends Component {
                 inputFieldType={'text'}
                 inputFieldName={'name'}
                 onFieldChange={this.onNameChange}
+                submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
             <div className="mv3">
@@ -85,6 +86,7 @@ class Register extends Component {
                 inputFieldType={'email'}
                 inputFieldName={'email-address'}
                 onFieldChange={this.onEmailChange}
+                submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
             <div className="mv3">
@@ -96,6 +98,7 @@ class Register extends Component {
                 inputFieldType={'password'}
                 inputFieldName={'password'}
                 onFieldChange={this.onPasswordChange}
+                submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
           </FormFieldset>

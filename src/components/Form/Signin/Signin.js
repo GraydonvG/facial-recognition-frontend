@@ -56,7 +56,7 @@ class Signin extends Component {
     const { onRouteChange } = this.props;
     return (
       <FormContainer>
-        <FormCard submitOnEnterPress={this.submitOnEnterPress}>
+        <FormCard>
           <FormFieldset>
             <FormLegend legendText={'Sign In'} />
             <div className="mt3">
@@ -68,6 +68,7 @@ class Signin extends Component {
                 inputFieldType={'email'}
                 inputFieldName={'email-address'}
                 onFieldChange={this.onEmailChange}
+                submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
             <div className="mv3">
@@ -79,6 +80,7 @@ class Signin extends Component {
                 inputFieldType={'password'}
                 inputFieldName={'password'}
                 onFieldChange={this.onPasswordChange}
+                submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
           </FormFieldset>

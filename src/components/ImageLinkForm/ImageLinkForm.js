@@ -1,7 +1,7 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
-const ImageLinkForm = ({ onInputChange, onPictureSubmit }) => {
+const ImageLinkForm = ({ onInputChange, onPictureSubmit, submitOnEnterPress }) => {
   return (
     <>
       <div className="tc form-container">
@@ -12,6 +12,7 @@ const ImageLinkForm = ({ onInputChange, onPictureSubmit }) => {
             type="text"
             placeholder="Enter image URL here"
             onChange={onInputChange}
+            onKeyDown={submitOnEnterPress}
           />
           <button
             className="form-btn f4 ph3 pv2 link grow dib white bg-light-purple"

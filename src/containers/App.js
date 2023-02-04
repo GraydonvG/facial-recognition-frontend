@@ -64,6 +64,12 @@ class App extends Component {
     this.setState({ input: event.target.value });
   };
 
+  submitOnEnterPress = (event) => {
+    if (event.key === 'Enter') {
+      this.onPictureSubmit();
+    }
+  };
+
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
 
@@ -141,6 +147,7 @@ class App extends Component {
             <ImageLinkForm
               onInputChange={this.onInputChange}
               onPictureSubmit={this.onPictureSubmit}
+              submitOnEnterPress={this.submitOnEnterPress}
             />
             <FaceRecognition
               box={box}
