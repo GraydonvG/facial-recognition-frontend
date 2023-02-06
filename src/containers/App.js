@@ -79,9 +79,11 @@ class App extends Component {
       user: { id },
     } = this.state;
 
-    fetch('https://smart-brain-7d96.onrender.com/imageurl', {
+    fetch('https://smart-brain-api-70fl.onrender.com/imageurl', {
       method: 'post',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         input: input,
       }),
@@ -89,9 +91,11 @@ class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch('https://smart-brain-7d96.onrender.com/image', {
+          fetch('https://smart-brain-api-70fl.onrender.com/image', {
             method: 'put',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
               id: id,
             }),
