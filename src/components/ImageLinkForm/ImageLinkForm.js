@@ -2,13 +2,6 @@ import React from 'react';
 import './ImageLinkForm.css';
 
 const ImageLinkForm = ({ onInputChange, onPictureSubmit, submitPictureOnEnterPress }) => {
-  const handleScrollOnClick = () => {
-    const image = document.getElementById('inputimage');
-    if (image) {
-      image.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
       <div className="tc form-container">
@@ -23,10 +16,7 @@ const ImageLinkForm = ({ onInputChange, onPictureSubmit, submitPictureOnEnterPre
           />
           <button
             className="form-btn f4 ph3 pv2 link grow dib white bg-light-purple"
-            onClick={() => {
-              onPictureSubmit();
-              handleScrollOnClick();
-            }}>
+            onClick={onPictureSubmit}>
             Detect
           </button>
         </div>

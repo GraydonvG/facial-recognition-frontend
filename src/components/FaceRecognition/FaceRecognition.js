@@ -2,6 +2,13 @@ import React from 'react';
 import './FaceRecognition.css';
 
 const FaceRecognition = ({ imageUrl, box }) => {
+  const handleScrollOnLoad = () => {
+    const image = document.getElementById('inputimage');
+    if (image) {
+      image.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="center ma">
       <div className="absolute mt4">
@@ -11,6 +18,7 @@ const FaceRecognition = ({ imageUrl, box }) => {
           src={imageUrl}
           width="500px"
           height="auto"
+          onLoad={handleScrollOnLoad}
         />
         {box.map((item) => {
           return (
