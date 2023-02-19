@@ -10,8 +10,8 @@ const FaceRecognition = ({ imageUrl, box }) => {
   };
 
   return (
-    <div className="center ma">
-      <div className="absolute mt4">
+    <div className="center">
+      <div className="absolute mt4 shadow-3">
         <img
           id="inputimage"
           alt=""
