@@ -9,7 +9,7 @@ const ImageLinkForm = ({ onInputChange, onPictureSubmit, submitPictureOnEnterPre
         <div className="form center pa4 br3 shadow-3">
           <input
             className="form-input f4 pa2 center"
-            type="text"
+            type="search"
             placeholder="Enter image URL here"
             onChange={onInputChange}
             onKeyDown={submitPictureOnEnterPress}
