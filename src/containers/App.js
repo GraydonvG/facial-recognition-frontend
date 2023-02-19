@@ -12,7 +12,7 @@ import Register from '../components/Form/Register/Register';
 const initialState = {
   input: '',
   imageUrl: '',
-  box: {},
+  box: [],
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -44,16 +44,24 @@ class App extends Component {
   };
 
   calculateFaceLocation = (response) => {
-    const clarifaiFace = response.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    return {
-      leftCol: clarifaiFace.left_col * width,
-      rightCol: width - clarifaiFace.right_col * width,
-      topRow: clarifaiFace.top_row * height,
-      bottomRow: height - clarifaiFace.bottom_row * height,
-    };
+    const clarifaiFaceRegions = response.outputs[0].data.regions;
+
+    const clarifaiFaceRegionsArray = clarifaiFaceRegions.map((face) => {
+      return face.region_info.bounding_box;
+    });
+
+    const calculateFaceBoxArray = clarifaiFaceRegionsArray.map((box) => {
+      return {
+        leftCol: box.left_col * width,
+        rightCol: width - box.right_col * width,
+        topRow: box.top_row * height,
+        bottomRow: height - box.bottom_row * height,
+      };
+    });
+    return calculateFaceBoxArray;
   };
 
   displayFaceBox = (box) => {
