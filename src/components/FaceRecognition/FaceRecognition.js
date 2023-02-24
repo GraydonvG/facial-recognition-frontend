@@ -11,13 +11,12 @@ const FaceRecognition = ({ imageUrl, box }) => {
 
   return (
     <div className="center">
-      <div className="absolute mt4 shadow-3">
+      <div className="absolute mt4">
         <img
           id="inputimage"
           alt=""
           src={imageUrl}
           width="500px"
-          height="auto"
           onLoad={handleScrollOnLoad}
         />
         {box.map((item) => {

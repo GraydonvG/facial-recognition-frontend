@@ -16,13 +16,7 @@ export const FormContainer = ({ children }) => {
 };
 
 export const FormCard = ({ children }) => {
-  return (
-    <div
-      className="shadow-3 br3 pa3 pa4-ns mv3 tc black-80 measure"
-      style={{ width: 'fit-content', height: 'fit-content' }}>
-      {children}
-    </div>
-  );
+  return <div className="shadow-3 br3 pa3 pa4-ns mv3 tc black-80 measure">{children}</div>;
 };
 
 export const FormFieldset = ({ children }) => {
@@ -46,7 +40,7 @@ export const Label = ({ labelName, forLabel }) => {
 export const InputField = ({ onFieldChange, inputFieldType, inputFieldName, submitOnEnterPress }) => {
   return (
     <input
-      style={{ width: '18rem', border: 'solid black 0.1rem' }}
+      style={{ width: '100%', border: 'solid black 1.6px' }}
       className="b br3 pa2 input-reset ba bg-transparent hover-bg-black hover-white"
       type={inputFieldType}
       name={inputFieldName}
@@ -59,7 +53,7 @@ export const InputField = ({ onFieldChange, inputFieldType, inputFieldName, subm
 export const Button = ({ onButtonPress, buttonType, buttonValue }) => {
   return (
     <input
-      style={{ border: 'solid black 0.1rem' }}
+      style={{ border: 'solid black 1.6px' }}
       className="b br3 ph3 pv2 input-reset ba b--black bg-transparent pointer f4 dib hover-bg-black hover-white"
       type={buttonType}
       value={buttonValue}
