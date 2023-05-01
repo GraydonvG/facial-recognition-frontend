@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Label,
-  InputField,
-  Button,
-  FormText,
-  FormFieldset,
-  FormLegend,
-  FormContainer,
-  FormCard,
-} from '../FormComponents/FormComponents';
+import { Label, InputField, Button } from '../FormComponents/FormComponents';
 
 class Register extends Component {
   constructor(props) {
@@ -63,10 +54,19 @@ class Register extends Component {
   render() {
     const { onRouteChange } = this.props;
     return (
-      <FormContainer>
-        <FormCard submitOnEnterPress={this.submitOnEnterPress}>
-          <FormFieldset>
-            <FormLegend legendText={'Register'} />
+      <div
+        style={{
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <div
+          className="shadow-3 br3 pa3 pa4-ns mv3 tc black-80 measure"
+          submitOnEnterPress={this.submitOnEnterPress}>
+          <fieldset className="ba b--transparent ph0 mh0">
+            <legend className="f1 fw6 ph0 mh0">Register</legend>
             <div className="mt3">
               <Label
                 labelName={'Name'}
@@ -103,20 +103,20 @@ class Register extends Component {
                 submitOnEnterPress={this.submitOnEnterPress}
               />
             </div>
-          </FormFieldset>
+          </fieldset>
           <Button
             buttonType={'submit'}
             buttonValue={'Register'}
             onButtonPress={this.onSubmitRegister}
           />
-          <FormText text={'Already have an account?'} />
+          <p className="f4 black db b mt4">Already have an account?</p>
           <Button
             buttonType={'submit'}
             buttonValue={'Sign In'}
             onButtonPress={() => onRouteChange('signin')}
           />
-        </FormCard>
-      </FormContainer>
+        </div>
+      </div>
     );
   }
 }

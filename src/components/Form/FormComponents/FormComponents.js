@@ -1,32 +1,5 @@
 import React from 'react';
 
-export const FormContainer = ({ children }) => {
-  return (
-    <div
-      style={{
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      {children}
-    </div>
-  );
-};
-
-export const FormCard = ({ children }) => {
-  return <div className="shadow-3 br3 pa3 pa4-ns mv3 tc black-80 measure">{children}</div>;
-};
-
-export const FormFieldset = ({ children }) => {
-  return <fieldset className="ba b--transparent ph0 mh0">{children}</fieldset>;
-};
-
-export const FormLegend = ({ legendText }) => {
-  return <legend className="f1 fw6 ph0 mh0">{legendText}</legend>;
-};
-
 export const Label = ({ labelName, forLabel }) => {
   return (
     <label
@@ -60,8 +33,4 @@ export const Button = ({ onButtonPress, buttonType, buttonValue }) => {
       onClick={onButtonPress}
     />
   );
-};
-
-export const FormText = ({ text }) => {
-  return <p className="f4 black db b mt4">{text}</p>;
 };
